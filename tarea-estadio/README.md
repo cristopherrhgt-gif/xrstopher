@@ -8,6 +8,8 @@ Diseño 3D hecho **solo con 2 figuras**: el CUBO y el PRISMA TRIANGULAR
 | Archivo | Qué es |
 |---|---|
 | `estadio-tinkercad-guia.html` | Guía interactiva: visor 3D (sin internet), slider de 18 pasos y tablas con medidas exactas (mm), centro X/Y, altura de base Z y color hex de cada pieza |
+| `estadio-documento.pdf` / `.docx` | Documento escolar para entregar en clase: portada, capturas con pies, tabla de 10 colores/hex, medidas y 18 pasos (se genera con `documento.py`) |
+| `estadio-documento.html` | El mismo documento en HTML para verlo mejor en pantalla |
 | `estadio-importar.html` | Cómo importar los 10 STL en Tinkercad y pintarlos (incluye tips para celular) |
 | `index.html` | Índice con todos los enlaces |
 | `estadio-piezas/01..10-*.stl` | **10 STL agrupados por color** (ver tabla abajo). Cada uno trae 4 marcas de posición de 0.6 mm en las esquinas (±97, ±74) para que al importarlos caigan alineados solos |

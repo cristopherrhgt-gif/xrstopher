@@ -7,10 +7,10 @@ M = json.load(open(os.path.join(HERE, 'estadio-modelo.json')))
 W, H = 900, 560
 rx, rz, zoom = -0.55, 0.62, 3.1
 cx, sx, cz, sz = math.cos(rx), math.sin(rx), math.cos(rz), math.sin(rz)
-L = [-0.45, -0.6, 0.66]
+L = [0.35, 0.5, 0.75]
 ln = math.sqrt(sum(v * v for v in L)); L = [v / ln for v in L]
 buf = bytearray(b'\x12\x16\x1c' * W * H)
-zbuf = [1e9] * (W * H)
+zbuf = [-1e9] * (W * H)
 
 def proy(x, y, z):
     x1 = x * cz - y * sz; y1 = x * sz + y * cz
@@ -54,7 +54,7 @@ for P, rgb, _ in caras:
                 continue
             z = l * P[0][2] + m * P[1][2] + (1 - l - m) * P[2][2]
             idx = yy * W + xx
-            if z < zbuf[idx]:
+            if z > zbuf[idx]:
                 zbuf[idx] = z
                 j = idx * 3
                 buf[j], buf[j + 1], buf[j + 2] = rgb
