@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estadio Tinkercad — Guía de importación (v2.0)</title>
+<style>
+  body { font-family: system-ui, Segoe UI, Roboto, Arial, sans-serif; margin: 0; background: #0f172a; color: #e2e8f0; }
+  header { background: linear-gradient(135deg,#1e3a8a,#0f172a); padding: 28px 20px; text-align: center; }
+  header h1 { margin: 0 0 6px; font-size: 26px; }
+  header p { margin: 0; color: #93c5fd; }
+  main { max-width: 900px; margin: 0 auto; padding: 24px 16px 60px; }
+  h2 { color: #38bdf8; border-bottom: 1px solid #1e293b; padding-bottom: 6px; margin-top: 36px; }
+  .box { background: #1e293b; border-radius: 12px; padding: 16px; margin: 12px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+  th, td { padding: 8px 10px; border-bottom: 1px solid #334155; text-align: left; font-size: 14px; }
+  th { color: #93c5fd; }
+  .swatch { display: inline-block; width: 14px; height: 14px; border-radius: 4px; border: 1px solid #64748b; vertical-align: middle; margin-right: 6px; }
+  code, .mono { font-family: ui-monospace, Consolas, monospace; background: #0b1220; padding: 1px 6px; border-radius: 5px; color: #fbbf24; }
+  .step { counter-increment: paso; background: #1e293b; border-left: 4px solid #38bdf8; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .step b.st { color: #38bdf8; }
+  img.prev { max-width: 100%; border-radius: 8px; border: 1px solid #334155; }
+  .warn { background: #451a03; border-left: 4px solid #fbbf24; padding: 12px 16px; border-radius: 8px; margin: 10px 0; }
+  .ok { background: #052e16; border-left: 4px solid #4ade80; padding: 12px 16px; border-radius: 8px; margin: 10px 0; }
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+  .pieza { background: #1e293b; border-radius: 12px; overflow: hidden; border: 1px solid #334155; }
+  .pieza img { width: 100%; display: block; }
+  .pieza .info { padding: 10px 12px; font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🏟️ ESTADIO — Guía de importación (v2.0)</h1>
+  <p>EPT · 4.º de secundaria · Solo cubos y prismas triangulares ("Tejado") · 9 piezas por color</p>
+</header>
+<main>
+
+<div class="ok">
+  <b>✅ Todo listo para tu celular.</b> Esta carpeta trae las <b>9 piezas STL</b> del estadio (una por color),
+  con <b>marcas de posición</b> (cubitos de 0.6 mm en las esquinas ±97, ±74) para que al importarlas
+  <b>caigan alineadas solas</b>. Todas son sólidos cerrados (watertight) verificados con software.
+  Si una pieza falla o cae corrida, dime <b>cuál es exactamente</b> y la arreglo.
+</div>
+
+<h2>1️⃣ Las 9 piezas (importa EN ESTE ORDEN)</h2>
+<div class="grid2">
+  <div class="pieza"><img src="estadio-piezas/verde-cancha.png" alt="verde"><div class="info"><b>1. verde-cancha.stl</b> — césped + franjas claras<br>Píntalo: <span class="swatch" style="background:#43A047"></span><code>#43A047</code></div></div>
+  <div class="pieza"><img src="estadio-piezas/gris-gradas.png" alt="gris"><div class="info"><b>2. gris-gradas.stl</b> — 4 tribunas + entrada<br>Píntalo: <span class="swatch" style="background:#90A4AE"></span><code>#90A4AE</code></div></div>
+  <div class="pieza"><img src="estadio-piezas/blanco-lineas.png" alt="blanco"><div class="info"><b>3. blanco-lineas.stl</b> — líneas, vallas, porterías, marcador<br>Píntalo: <span class="swatch" style="background:#FFFFFF"></span><code>#FFFFFF</code></div></div>
+  <div class="pieza"><img src="estadio-piezas/columnas-pizarra.png" alt="pizarra"><div class="info"><b>4. columnas-pizarra.stl</b> — 18 columnas + torres de luz<br>Píntalo: <span class="swatch" style="background:#546E7A"></span><code>#546E7A</code></div></div>
+  <div class="pieza"><img src="estadio-piezas/techos-plateado.png" alt="techos"><div class="info"><b>5. techos-plateado.stl</b> — 4 techos de prisma triangular<br>Píntalo: <span class="swatch" style="background:#CFD8DC"></span><code>#CFD8DC</code></div></div>
+  <div class="pieza"><img src="estadio-piezas/rojo-asientos.png" alt="rojo"><div class="info"><b>6. rojo-asientos.stl</b> — filas de asientos rojas<br>Píntalo: <span class="swatch" style="background:#E53935"></span><code>#E53935</code></div></div>
+  <div class="pieza"><img src="estadio-piezas/azul-asientos.png" alt="azul"><div class="info"><b>7. azul-asientos.stl</b> — filas de asientos azules<br>Píntalo: <span class="swatch" style="background:#1E88E5"></span><code>#1E88E5</code></div></div>
+  <div class="pieza"><img src="estadio-piezas/oscuro.png" alt="oscuro"><div class="info"><b>8. oscuro.stl</b> — redes, marcador, túnel, bancos, banderines<br>Píntalo: <span class="swatch" style="background:#212121"></span><code>#212121</code></div></div>
+  <div class="pieza"><img src="estadio-piezas/amarillo-luces.png" alt="amarillo"><div class="info"><b>9. amarillo-luces.stl</b> — luces de las torres<br>Píntalo: <span class="swatch" style="background:#FFF176"></span><code>#FFF176</code></div></div>
+</div>
+
+<div class="box">
+  <b>🎁 Extra (opcional):</b> <code>verde-franjas-oscuras.stl</code> — son las franjas oscuras del césped
+  (<span class="swatch" style="background:#388E3C"></span><code>#388E3C</code>), que vienen en relieve dentro de
+  <code>verde-cancha</code>. Si quieres el pasto con las <b>2 verdes bien diferenciadas</b>, importa este archivo
+  después del paso 1, píntalo <code>#388E3C</code> y listo (trae las mismas marcas → alinea solo).
+</div>
+
+<h2>2️⃣ Pasos en Tinkercad (desde el celular o PC)</h2>
+<div class="step"><b class="st">PASO 1 ·</b> Entra a <b>tinkercad.com</b> → <b>Diseños 3D</b> → <b>Crear</b> → <b>Nuevo diseño</b>.</div>
+<div class="step"><b class="st">PASO 2 ·</b> Botón <b>Importar</b> (arriba a la derecha) → elige <code>1. verde-cancha.stl</code>.
+  Déjalo caer <b>exactamente donde caiga</b>, NO lo muevas.</div>
+<div class="step"><b class="st">PASO 3 ·</b> Repite con las piezas <b>2 a 9</b> en orden. Gracias a las marcas, todas
+  deberían quedar alineadas solas. No muevas nada todavía.</div>
+<div class="step"><b class="st">PASO 4 ·</b> Pinta cada pieza: haz clic en ella → menú <b>Sólido</b> → <b>Color</b> →
+  <b>Personalizado</b> → escribe su código <code>hex</code> (la tabla de arriba) → Aceptar.</div>
+<div class="step"><b class="st">PASO 5 ·</b> Cuando las 9 estén pintadas: <code>Ctrl+A</code> (seleccionar todo) →
+  <code>Ctrl+G</code> (agrupar). Queda <b>una sola pieza</b>.</div>
+<div class="step"><b class="st">PASO 6 ·</b> Nombra el diseño: <b>"Estadio — [Jamón de barrio]"</b> (o el nombre que
+  prefieras). ¡Listo para entregar! 🎉</div>
+
+<h2>3️⃣ Tip para el celular</h2>
+<div class="box">
+  Si el navegador del celular da <b>"incompatible"</b> al importar:
+  <ul>
+    <li>Baja el archivo <b>directo</b> a tu teléfono (que no cambie la extensión <code>.stl</code>).</li>
+    <li>Importa desde <b>tinkercad.com</b> → botón Importar (no desde la app de archivos).</li>
+    <li>Si puedes, hazlo desde una <b>computadora</b>: va mucho más fino.</li>
+    <li>Todo el conjunto mide ~194×148×40 mm. Si lo quieres más grande:
+      <code>Ctrl+A</code> → agarra una esquina y escala (<b>×10</b> = 1.94 m).</li>
+  </ul>
+</div>
+
+<h2>4️⃣ Si algo sale mal</h2>
+<div class="warn">
+  <b>El estadio completo de respaldo:</b> <code>estadio-tinkercad.stl</code> (1 sola pieza) y
+  <code>estadio-tinkercad.obj</code>. Si alguna de las 9 falla, dime <b>el número y el color</b>
+  de la pieza y la regenero.
+</div>
+<div class="warn">
+  <b>Recuerda:</b> el formato STL no guarda colores — por eso el plan es importar 9 piezas y pintar
+  cada una con su código hex (2 clics por pieza). El color queda guardado en el diseño de Tinkercad.
+</div>
+<div class="ok">
+  <b>Kits SVG:</b> <code>kit-1-cancha.svg</code>, <code>kit-2-graderias.svg</code> y
+  <code>cancha-lineas.svg</code> — por si los necesitas (a ti los SVG sí te importan bien).
+</div>
+
+</main>
+</body>
+</html>
